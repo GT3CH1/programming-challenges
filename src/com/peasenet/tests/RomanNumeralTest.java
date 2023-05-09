@@ -217,4 +217,12 @@ public class RomanNumeralTest {
         Assertions.assertEquals(input, res, "Expected " + input + " but got " + res);
     }
 
+    @Test
+    void complex_84738() {
+        var expected = 84738;
+        var string = "lxxxivDCCXXXVIII";
+        var res = new RomanNumeralsAlgorithm(string);
+        Assertions.assertEquals(expected, res.getAnswer(), "Expected " + expected + " but got " + res.getAnswer());
+    }
+
 }
