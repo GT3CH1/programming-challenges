@@ -225,4 +225,20 @@ public class RomanNumeralTest {
         Assertions.assertEquals(expected, res.getAnswer(), "Expected " + expected + " but got " + res.getAnswer());
     }
 
+
+    @Test
+    void complex_491388() {
+        var expected = 491388;
+        var string = "cdxcMCCCLXXXVIII";
+        var res = new RomanNumeralsAlgorithm(string);
+        Assertions.assertEquals(expected, res.getAnswer(), "Expected " + expected + " but got " + res.getAnswer());
+    }
+
+    @Test
+    void complex_cdxcMCCCLXXXVIII() {
+        var expected = "cdxcMCCCLXXXVIII";
+        var res = RomanNumeralsAlgorithm.fromDecimal(491388);
+        Assertions.assertEquals(expected, res, "Expected " + expected + " but got " + res);
+    }
+
 }
